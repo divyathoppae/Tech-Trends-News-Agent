@@ -1,0 +1,10 @@
+2025-11-26 15:57:12,141 - INFO - Retrieved 20 articles for query: technology (from 2025-10-27 to 2025-11-26)
+2025-11-26 15:59:01,970 - ERROR - API request failed: 426 Client Error: Upgrade Required for url: https://newsapi.org/v2/everything?q=technology&from=2025-10-27&to=2025-11-26&language=en&pageSize=1000&apiKey=821aeebd32f34b238e99e1282b9eb935
+2025-11-26 16:00:30,319 - INFO - Retrieved 10 articles for query: technology (from 2025-10-27 to 2025-11-26)
+2025-11-26 16:00:56,917 - INFO - Retrieved 100 articles for query: technology (from 2025-10-27 to 2025-11-26)
+2025-11-26 16:01:35,280 - ERROR - API request failed: 426 Client Error: Upgrade Required for url: https://newsapi.org/v2/everything?q=technology&from=2025-10-27&to=2025-11-26&language=en&pageSize=500&apiKey=821aeebd32f34b238e99e1282b9eb935
+2025-11-26 16:01:59,839 - ERROR - API request failed: 426 Client Error: Upgrade Required for url: https://newsapi.org/v2/everything?q=technology&from=2025-10-27&to=2025-11-26&language=en&pageSize=426&apiKey=821aeebd32f34b238e99e1282b9eb935
+2025-11-26 16:02:24,509 - ERROR - API request failed: 426 Client Error: Upgrade Required for url: https://newsapi.org/v2/everything?q=technology&from=2025-10-27&to=2025-11-26&language=en&pageSize=300&apiKey=821aeebd32f34b238e99e1282b9eb935
+2025-11-26 16:02:39,456 - ERROR - API request failed: 426 Client Error: Upgrade Required for url: https://newsapi.org/v2/everything?q=technology&from=2025-10-27&to=2025-11-26&language=en&pageSize=200&apiKey=821aeebd32f34b238e99e1282b9eb935
+2025-11-26 16:02:53,762 - INFO - Retrieved 100 articles for query: technology (from 2025-10-27 to 2025-11-26)
+2025-11-26 16:03:21,816 - INFO - Retrieved 100 articles for query: technology (from 2025-10-27 to 2025-11-26)

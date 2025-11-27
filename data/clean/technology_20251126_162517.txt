@@ -1,0 +1,403 @@
+Source: Wired
+Title: A New Light-Based Cancer Treatment Kills Tumor Cells and Spares Healthy Ones
+Description: By combining LED technology and nanomaterials, researchers have created a therapy that eliminates cancer cells using localized heat without damaging healthy tissue.
+
+Source: Wired
+Title: Inside the Multimillion-Dollar Plan to Make Mobile Voting Happen
+Description: Political consultant Bradley Tusk has spent a fortune on mobile voting efforts. Now, he’s launching a protocol to try to mainstream the technology.
+
+Source: Gizmodo.com
+Title: Is Waymo Ready for the Icy Streets of Detroit and Denver? It Had Better Be, Because It’s Coming
+Description: Buckle up. Autonomous vehicle technology is moving to locales less-than-ideal conditions.
+
+Source: BBC News
+Title: China's investment spree in UK gave it access to military-grade technology, BBC told
+Description: Tens of billions of pounds has been spent by the Chinese in the UK since 2000, Panorama has learned.
+
+Source: The Verge
+Title: ‘Eyes-off driving’ is coming, and we’re so not ready
+Description: Last month, General Motors added its name to the growing list of automakers who are pursuing a novel type of partially automated technology called "eyes-off driving." What they didn't do, though, is provide a thorough description of how they'll take responsib…
+
+Source: The Verge
+Title: Nvidia’s ‘I’m Not Enron’ memo has people asking a lot of questions already answered by that memo
+Description: Christ. Fine. So over the weekend, a strange Substack post from what appears to be a CEO of a pet relocation company went very viral. This post — which to be clear, is bullshit — alleges that Nvidia is engaged in “may become the largest accounting fraud in te…
+
+Source: The Verge
+Title: Future Google TV devices might come with a solar-powered remote
+Description: Epishine, a company that makes solar cells optimized for indoor lighting, has announced its technology is being used in a new remote control for Google TV devices, as spotted by 9to5Google. The remote will rely on rechargeable batteries instead of disposable …
+
+Source: The Verge
+Title: Apple is planning to use a custom version of Google Gemini for Apple Intelligence
+Description: Apple is preparing to power its AI-upgraded Siri with a custom version of Google’s Gemini AI model, according to a report from Bloomberg’s Mark Gurman. The iPhone maker will reportedly pay Google around $1 billion annually to gain access to the technology, wh…
+
+Source: The Verge
+Title: Senator Warren presses Trump admin on potential AI bailout plans
+Description: Senator Elizabeth Warren (D-MA) is pressing the Trump administration for more information on potential plans to “prop up” major AI companies with money from taxpayers. In a letter to David Sacks, the White House special advisor for AI and Crypto, and Michael …
+
+Source: The Verge
+Title: The geek’s guide to running faster
+Description: One thing we talk a lot about on The Vergecast is how to engage with technology without losing your mind. One version of that discussion has to do with fitness, and the so-called quantified self: what does it take to make use of the tools and trackers availab…
+
+Source: Wired
+Title: The AI Boom Is Fueling a Need for Speed in Chip Networking
+Description: Next-gen networking tech, sometimes powered by light instead of electricity, is emerging as a critical piece of AI infrastructure.
+
+Source: Wired
+Title: With the Rise of AI, Cisco Sounds an Urgent Alarm About the Risks of Aging Tech
+Description: Generative AI is making it even easier for attackers to exploit old and often forgotten network equipment. Replacing it takes investment, but Cisco is making the case that it’s worth it.
+
+Source: Hackaday
+Title: An Introduction to DC Motor Technology
+Description: [Thinking Techie] takes us back to basics in a recent video explaining how magnets, coils, brushed DC motors, and brushless DC motors work. If this is on your “to learn” list, or you ju…
+
+Source: NPR
+Title: Immigration agents have new technology to identify and track people
+Description: The Department of Homeland Security is adopting powerful new tools to monitor noncitizens. Privacy advocates are worried they erode privacy rights for immigrants and Americans alike.
+
+Source: Wired
+Title: Aura Ink Review (2025): Newspaper-Style Realism
+Description: Aura's new digital photo frame changes the game with a fully wireless device and E Ink screen.
+
+Source: Harvard Business Review
+Title: Research: When Are Customers Willing to Try a New Technology?
+Description: Marketers need to meet people during unexpected pockets of free time.
+
+Source: Wired
+Title: The Worst Thing About AI Is That People Can’t Shut Up About It
+Description: A plea from WIRED’s top boss: Say less.
+
+Source: Android Central
+Title: Leaked details on Samsung's XR Smart Glasses: Transition lenses & built-in camera
+Description: Samsung's forthcoming smart glasses, codenamed "HAEAN," promise a fusion of style and technology, new leak suggests.
+
+Source: Wired
+Title: AI Is Not God
+Description: In recent times, there have been two techno-religious awakenings. Here comes the third?
+
+Source: Wired
+Title: The AI Data Center Boom Is Warping the US Economy
+Description: Microsoft, Alphabet, Meta, and Amazon are investing tens of billions in data centers. AI infrastructure is now a key driver of US economic growth.
+
+Source: Android Central
+Title: Samsung says the Galaxy S26 will get an AI upgrade with enhanced camera performance
+Description: Samsung's recent earnings call hinted at the impending Galaxy S26 launch, revealing groundbreaking AI enhancements and potential new camera technology.
+
+Source: Yahoo Entertainment
+Title: BDA China's Clark on China's Technology Landscape
+Description: Duncan Clark, Chairman and Founder of BDA China, says China is a highly dynamic and competitive market for tech companies and that Chinese talent is a global...
+
+Source: The Verge
+Title: Samsung previews HDR10 Plus Advanced, its answer to Dolby Vision 2
+Description: During a press junket last week, Samsung showed a simulated demo of the new dynamic HDR format, and it includes six features similar to what the recently-revealed Dolby Vision 2 will offer. TVs from Samsung and any other manufacturers who support it will be a…
+
+Source: The Verge
+Title: Anthropic will invest $50 billion in building AI data centers in the US
+Description: Anthropic just announced plans to put $50 billion toward bolstering computing infrastructure in the US. As part of the initiative, the company is working with the AI cloud platform Fluidstack to build datacenters in Texas and New York, “with more sites to com…
+
+Source: Business Insider
+Title: 3 CEOs on the frontlines of driverless tech challenged my assumptions on autonomy
+Description: Three CEOs working on autonomy dispel some of the common misconceptions around driverless technology.
+
+Source: Gizmodo.com
+Title: October Layoffs Were the Worst Since 2003 and Hit Tech Workers Hard
+Description: For coders, October royally sucked.
+
+Source: Gizmodo.com
+Title: In the First ‘Toy Story 5’ Trailer, the Age of Toys Is Over
+Description: Greta Lee joins a cast that includes Tom Hanks and Tim Allen. The film opens June 19.
+
+Source: Android Central
+Title: OnePlus' latest tech promises to enhance the Android gaming experience
+Description: OnePlus unveiled revolutionary gaming technology, set to enhance its flagship OnePlus 15, promising 120fps stability through cutting-edge chip-level optimizations.
+
+Source: Android Central
+Title: How T-Mobile's 5G network is powering the F1 Las Vegas Grand Prix
+Description: Formula 1 racing is surging in popularity, and T-Mobile's 5G network is set to power the Las Vegas Grand Prix using 5G technology.
+
+Source: Business Insider
+Title: This startup raised $26 million to protect data in subsea cables from hackers. Read the pitch deck.
+Description: CyberRidge's technology manipulates light to conceal data from potential adversaries as it travels through fiber-optic cables.
+
+Source: Business Insider
+Title: Amazon's TV and movie arm was hit during the company's broad layoffs. Here's what we know.
+Description: Amazon MGM Studios was impacted by the broader layoffs announced Tuesday as the company leans into AI technology.
+
+Source: Business Insider
+Title: Warren Buffett's Berkshire Hathaway reveals $4.3 billion Alphabet stake in his final weeks as CEO
+Description: Berkshire Hathaway invested in Google's parent company, Alphabet, last quarter despite Warren Buffett's famous aversion to technology.
+
+Source: CNET
+Title: The Ultimate Pet Tech Roundup: CNET’s Pet Owners Tested Every Device to Find the Best
+Description: From cameras and feeding stations to litterboxes and trackers, CNET dove into every kind of pet technology to find what’s worth your money and time.
+
+Source: Gizmodo.com
+Title: 6 Women Inventors Who Changed Your Life, Even if You Didn’t Know It
+Description: These are some of the women behind the technologies that make our modern world go round, from WiFi to windshield wipers.
+
+Source: Slashdot.org
+Title: OpenAI Finalizes Corporate Restructuring, Gives Microsoft 27% Stake and Technology Access Until 2032
+Description: Microsoft and OpenAI have finalized a new agreement that removes uncertainty for investors and clears the path for OpenAI to restructure as a for-profit business. Microsoft receives a 27% ownership stake in OpenAI worth approximately $135 billion and retains …
+
+Source: Slashdot.org
+Title: Why Does So Much New Technology Feel Inspired by Dystopian Sci-Fi Movies?
+Description: In a recent article published in the New York Times, author Casey Michael Henry argues that today's tech industry keeps borrowing dystopian sci-fi aesthetics and ideas -- often the parts that were meant as warnings -- and repackages them as exciting products …
+
+Source: Business Insider
+Title: I tried a Tesla FSD dupe. It's challenging how I think about the technology.
+Description: Wayve is developing an advanced driver assistance system that is akin to Tesla's Full Self-Driving (Supervised).
+
+Source: Gizmodo.com
+Title: Nvidia Bets the Future on a Robot Workforce
+Description: From surgical robots to humanoid robot fleets for household chores, here's what Nvidia announced about its robots at GTC.
+
+Source: Yahoo Entertainment
+Title: Taiwan to further tighten export controls for dual-use technology
+Description: TAIPEI (Reuters) -Taiwan will tighten its export controls for potential dual-use civilian-military technology to include quantum computers and advanced...
+
+Source: Wired
+Title: AI Is the Bubble to Burst Them All
+Description: I talked to the scholars who literally wrote the book on tech bubbles—and applied their test.
+
+Source: BBC News
+Title: NHS to offer same-day prostate cancer diagnosis
+Description: The new trial, which uses AI, has been described as a "game changer" for treating the disease.
+
+Source: Business Insider
+Title: Palantir CTO says AI doomerism is driven by a lack of religion
+Description: "I think the secularists in Silicon Valley are filling the God-shaped hole in their heart," said Shyam Sankar, Palantir's chief technology officer.
+
+Source: Business Insider
+Title: 'Code quality' doesn't matter because it won't make you successful, Block's CTO says
+Description: Block's chief technology officer, Dhanji Prasanna, says clean, elegant code is overrated — what matters is building products that solve real problems.
+
+Source: Business Insider
+Title: My 83-year-old mom had dementia, and I lived 1,200 miles away. My oldest son visited her regularly, and I called her every day.
+Description: Heather Boynton felt guilty that she lived an 18-hour drive from her mom with dementia. But technology helped them both deal with the divide.
+
+Source: Business Insider
+Title: Tired of doomscrolling? It's time to start using an 'analog bag.'
+Description: TikTokers are packing "analog bags" to curb doomscrolling. They say it's part of a wider effort to use phones and technology more intentionally.
+
+Source: Android Central
+Title: Lumia 2 earrings arrive, and they track more than your smartwatch ever could
+Description: Lumia unveiled the revolutionary Lumia 2 smart earrings, which not only elevate your style but also monitor vital health metrics, offering a blend of fashion and cutting-edge technology for a personalized wellness experience.
+
+Source: Gizmodo.com
+Title: Apple Suffers 2 Defeats in One Day Amid Patent War with Masimo
+Description: The Apple-Masimo saga is long and has many plot twists.
+
+Source: Gizmodo.com
+Title: Amazon CEO Now Says AI Is Not Responsible for Recent Layoffs
+Description: CEO Andy Jassy told investors on Thursday that the cuts were based on ‘culture.’
+
+Source: Yahoo Entertainment
+Title: Breakthrough South Korean technology could be a game-changer in the future of transportation: 'We can … make a significant impact'
+Description: It's a complex mix of elements, compounds, and technology.
+
+Source: Gizmodo.com
+Title: Sorry Sony Fans, the PS6 May Be Even More PC Than Console, Too
+Description: Get ready for the generation of consoles with the guts of a PC.
+
+Source: NPR
+Title: Want less screen-obsessed kids? Set better tech boundaries for yourself
+Description: There's a lot of talk about how to monitor screen time for kids. But for kids to have healthy relationships with technology and smartphones, parents need to model good habits. Here's how.
+
+Source: Business Insider
+Title: I'm Cisco's innovation officer. Technology is evolving at a rate we've never seen — so these skills are essential.
+Description: Cisco exec says that humanities skills, such as philosophy, ethics, and problem-solving, are essential as tech evolves so rapidly.
+
+Source: The Verge
+Title: The LG G5 takes OLED performance to another level
+Description: LG OLEDs are consistently some of the best TVs you can get, and I've lost count how many times I've recommended them to family and friends. Add the LG G5 to that list. It's LG's high-end gallery-style TV, designed to look refined and sleek mounted on the wall…
+
+Source: Hackaday
+Title: Teardown of HP Optical Link and Signal Investigations Using Siglent Technology
+Description: Anything with a laser has undeniable hacker appeal, even if the laser’s task is as pedestrian as sending data over a fiber optic cable. [Shahriar] from [The Signal Path] must agree, and you c…
+
+Source: Slashdot.org
+Title: UK Signs Scaled-Back Scientific Collaboration With China
+Description: The UK and China today signed a new bilateral agreement on scientific collaboration [non-paywalled source], narrowing the scope of their partnership to exclude sensitive technologies. Lord Patrick Vallance, Britain's science and technology minister, met his C…
+
+Source: The Verge
+Title: How deep-sea mining could threaten a vital ocean food source
+Description: The race to mine battery minerals from the ocean floor would create a new stream of waste that could rob sea life of a critical food source, according to new research published today in the journal Nature Communications. That could have far-reaching effects a…
+
+Source: Twz.com
+Title: Can U.S. Intel Keep Up With China’s Tsunami Of Weapons Developments?
+Description: Experts provide us with insights about the impact of Beijing's snowballing military technology advances on U.S. intelligence.
+
+Source: Seths.blog
+Title: Caveman economics
+Description: Marshall Sahlins and others showed that early hunter gatherer societies generally didn’t work very hard. Two or three hours a day were spent gathering food, and the rest of the time was for social engagement and family. With all the technology and innovation …
+
+Source: Kotaku
+Title: Amazon Offloads Bose Smart Dolby Atmos Soundbar, Now Selling at No-Name Soundbar Prices
+Description: Premium Dolby Atmos with TrueSpace technology for immersive listening.
+The post Amazon Offloads Bose Smart Dolby Atmos Soundbar, Now Selling at No-Name Soundbar Prices appeared first on Kotaku.
+
+Source: Kotaku
+Title: Dyson Quietly Unloads Its 185AW Vacuum Stick on Amazon, Now Cheaper Than No-Name Vacuums
+Description: 185AW with auto-adjusting suction and hair-detangling brush technology, our favorite vacuum cleaner!
+The post Dyson Quietly Unloads Its 185AW Vacuum Stick on Amazon, Now Cheaper Than No-Name Vacuums appeared first on Kotaku.
+
+Source: Kotaku
+Title: Amazon Clears Out Its Fire TV Soundbar Plus, Now Cheaper Than a Mini Bluetooth Speaker
+Description: Transform your flat TV audio into immersive 3.1 surround with Dolby Atmos technology.
+The post Amazon Clears Out Its Fire TV Soundbar Plus, Now Cheaper Than a Mini Bluetooth Speaker appeared first on Kotaku.
+
+Source: Gizmodo.com
+Title: Trump Organization Announces Tokenized Hotel Development as Crypto ‘Crime Season’ Continues
+Description: There's a big crypto pot just waiting for anyone to put money into it.
+
+Source: Gizmodo.com
+Title: Christopher Nolan’s ‘The Odyssey’ Is Getting Theaters to Make Major Upgrades
+Description: Cinemark now joins Regal in adding and upgrading IMAX screens for the Matt Damon-Tom Holland summer 2026 film.
+
+Source: Gizmodo.com
+Title: These Wooden Wireless Earbuds Claim to Self-Heal Small Scratches
+Description: JVC Kenwood's Wood Master wireless earbuds are looking like stiff competition.
+
+Source: Gizmodo.com
+Title: Sensor Survives Reactor-Level Heat and Radiation, Paving the Way for Real-Time Monitoring
+Description: This tiny chip can withstand temperatures up to 1,500 degrees and could one day sit inside the core of a nuclear reactor, delivering critical real-time data.
+
+Source: Gizmodo.com
+Title: Physicists Built a Pixel So Small, Full HD Could Fit on a Bread Crumb
+Description: The pixels are small enough to pack a 1920 by 1080 resolution into a display the size of breadcrumbs.
+
+Source: Gizmodo.com
+Title: Powering AI Could Soon Use as Much Water as 10 Million Americans
+Description: The researchers’ recommendations could reduce AI’s carbon emissions by up to 73%.
+
+Source: Yahoo Entertainment
+Title: CoreWeave beats third-quarter revenue estimates on AI computing boom
+Description: CoreWeave ‌has cemented its position as a key infrastructure partner for the biggest names in technology, ‌landing a string of multibillion-dollar deals...
+
+Source: Popular Mechanics
+Title: Archaeologists Found Ancient Tools That Contradict the Timeline of Civilization
+Description: Stone tools reveal Southeast Asia led the world in advanced seafaring 40,000 years ago, reshaping our understanding of ancient maritime technology.
+
+Source: Yahoo Entertainment
+Title: Don't panic yet, investors say, as high-flying AI stocks tumble
+Description: SINGAPORE/NEW YORK (Reuters) -Sharp falls in technology stock prices are cause for caution but not panic yet, said brokers and investors who have been riding...
+
+Source: Yahoo Entertainment
+Title: New Deals Show AI Compute Spend Keeps Growing
+Description: T. Rowe Price's Science & Technology Fund Portfolio Manager Tony Wang discusses the impact of the latest deals and demand for AI compute. He joins Caroline...
+
+Source: Yahoo Entertainment
+Title: Fidelity sues Broadcom over access to key software to avoid outages
+Description: BOSTON (Reuters) -A subsidiary of Fidelity Investments has filed a lawsuit accusing technology company Broadcom of threatening to cut off its access to ​key ...
+
+Source: Yahoo Entertainment
+Title: Starlink's direct-to-cell service launches in Ukraine in European first
+Description: KYIV (Reuters) -Ukraine's largest mobile operator Kyivstar has become the first in Europe to launch Starlink's direct-to-cell satellite technology in a bid...
+
+Source: Yahoo Entertainment
+Title: These $280 sleeping earbuds block out snoring and outside noises. I tried them — here's my honest review
+Description: The Soundcore Sleep A30 by Anker Sleep Earbuds are comfortable for side sleepers and use AI technology to block out disruptive outside noises.
+
+Source: The Verge
+Title: WhatsApp can now use passkeys to secure your backups
+Description: WhatsApp is introducing a passwordless way to instantly secure your chat backups. The messaging platform is launching passkey-encrypted backups for iOS and Android, allowing users to quickly encrypt their stored message history using their face, fingerprint, …
+
+Source: Yahoo Entertainment
+Title: Tech war: ByteDance cuts off Claude model after Anthropic restricts China access
+Description: TikTok parent ByteDance has pulled the plug on US technology firm Anthropic's Claude artificial intelligence models on its Singapore-based coding app Trae...
+
+Source: The Daily Meal
+Title: How This Pizza Chain Quietly Became The Go-To Spot In America
+Description: The fastest-growing pizza chain in the U.S. has leveraged technology and innovative strategies to prove its value. Here's how it became a market leader.
+
+Source: Geekspin.co
+Title: NASA’s new jet flies faster than sound without the boom
+Description: NASA’s latest experiment in quiet flight just made a little history and a very soft sound. The space agency has spent years developing technology to solve...
+
+Source: Yahoo Entertainment
+Title: U.S. chipmaker Marvell plans India hiring spree, R&D push to tap AI boom
+Description: BENGALURU (Reuters) -U.S. chipmaker Marvell Technology plans to boost hiring and research spending in India to ​tap surging global demand for AI...
+
+Source: Yahoo Entertainment
+Title: Why IBM (IBM) Stock Is Up Today
+Description: Shares of technology and consulting giant IBM (NYSE:IBM) jumped 2.8% in the afternoon session after renewed enthusiasm for Alphabet reinvigorated the...
+
+Source: TheStreet
+Title: Cathie Wood buys $16.7 million of megacap AI stock
+Description: Cathie Wood, CEO of Ark Investment Management, typically focuses on small- and mid-cap technology stocks. But she occasionally ventures into megacap growth...
+
+Source: The Verge
+Title: The first Toy Story 5 teaser threatens the toys with a tablet
+Description: Disney and Pixar have released the first teaser trailer for Toy Story 5, showing tablet screens as an “all-new threat to playtime.” The trailer introduces — much to the horror of Woody and co — a new character called “Lilypad,” a frog-shaped tablet played by …
+
+Source: The Verge
+Title: FBI subpoenas the web registrar behind Archive.is
+Description: The FBI is attempting to track down the identity of the owner of Archive.today and its numerous mirrors, like Archive.is and Archive.ph. As reported by 404 Media, the FBI subpoena, which was posted on the official Archive.today X account, was sent to web doma…
+
+Source: The Verge
+Title: How AI is fueling an existential crisis in education
+Description: Here on Decoder, we’ve talked a lot about generative AI, which is a very big idea that is causing quite a few problems. One thing we keep hearing about over and over again is that generative AI is causing a lot of problems in schools. A lot of people out ther…
+
+Source: Harvard Business Review
+Title: Making Sense of Research on How People Use AI
+Description: A guide to becoming a more critical reader of the latest studies.
+
+Source: Hackaday
+Title: Programming the 6581 Sound Interface Device (SID) with the 6502
+Description: Over on YouTube, [Ben Eater] pursues that classic 8-bit sound. In this video, [Ben] integrates the MOS Technology 6581 Sound Interface Device (SID) with his homegrown 6502. The 6581 SID was famousl…
+
+Source: Hackaday
+Title: Why Do We Love Weird Old Tech?
+Description: One of our newer writers, [Tyler August], recently wrote a love letter to plasma TV technology. Sitting between the ubiquitous LCD and the vanishing CRT, the plasma TV had its moment in the sun, bu…
+
+Source: Hackaday
+Title: WWII Secret Agents for Science
+Description: We always enjoy [History Guy]’s musing on all things history, but we especially like it when his historical stories intersect with technology. A good example was his recent video about …read more
+
+Source: Hackaday
+Title: Deep Fission Wants to put Nuclear Reactors Deep Underground
+Description: Today’s pressurized water reactors (PWRs) are marvels of nuclear fission technology that enable gigawatt-scale power stations in a very compact space. Though they are extremely safe, with only the TMI-2 …read more
+
+Source: Business Insider
+Title: David Solomon says AI means Goldman needs 'more high-value people'
+Description: Goldman Sachs CEO said that AI will increase the bank's headcount and make productive people more productive.
+
+Source: Gizmodo.com
+Title: ‘Owl House’ Creator Dana Terrace Gives Her Blessing to Pirate It
+Description: With Disney ready to accept genAI-made user content for Disney+, Dana Terrace wants 'Owl House' fans to know where she stands.
+
+Source: The Verge
+Title: Tech companies don’t care that students use their AI agents to cheat
+Description: AI companies know that children are the future - of their business model. The industry doesn't hide their attempts to hook the youth on their products through well-timed promotional offers, discounts, and referral programs. "Here to help you through finals," …
+
+Source: The Verge
+Title: The Czinger 21C is a halo car for the future military-industrial complex
+Description: Countless cars have received military-grade marketing over the years, their performances likened to some form of ordnance or another. Saab was notorious for leaning on its aeronautical origins, and it's hard to imagine what kind of state Jeep would be in toda…
+
+Source: Functionize.com
+Title: The Final Straw: Why Companies Replace Once-Beloved Technology Brands
+Description: Discover the 6 final straws that cause companies to abandon their technology brands: Functionality, Quality, Integration, Confidence, Price, and Peopleware.
+
+Source: Business Insider
+Title: Experts discuss how to scale up the autonomous vehicle industry
+Description: Industry experts explore scaling the autonomous vehicle market, emphasizing safety and collaboration among automakers, tech innovators, and policymakers to drive growth and adoption.
+
+Source: Slashdot.org
+Title: Apple Cuts App Store Fee In Half For 'Mini Apps'
+Description: Apple is cutting its App Store fee from 30% to 15% for developers who join a new Mini Apps Partner Program, which requires using more of Apple's built-in technology to power lightweight "mini apps." "This includes using Apple software to register a user's pur…
+
+Source: Android Central
+Title: Galaxy S26 display rumored to keep brightness level same as S25 series
+Description: As leaks swirl around Samsung's upcoming Galaxy S26 series, speculation continues regarding display capabilities, with expectations largely focused on maintaining peak brightness at 2,600 nits.
+
+Source: MacRumors
+Title: How Vibration-Based Speakers Work and Why Apple Might Use Them in the iPad Mini 8
+Description: The next-generation iPad mini 8 could feature an updated design that removes the speaker holes for improved water resistance, with Apple considering a new speaker system design. The new system would use vibration-based technology, according to Bloomberg, whic…
+
+Source: Business Insider
+Title: A US company making long-range drone warships for a China fight just put its tech to the test in the water
+Description: The US Navy needs multi-mission, long-range autonomous warships that can traverse and fight across the vast waters of the Pacific.
+
+Source: Barchart.com
+Title: ‘It Is Alien Technology’: Elon Musk Says It ‘Shouldn’t Be Possible’ for Cybertruck to Be ‘That Big and That Fast’
+Description: Elon Musk’s vision for Tesla’s Cybertruck reflects his blend of futurism, functionality, and survivalist design philosophy rooted in bold practicality.
+

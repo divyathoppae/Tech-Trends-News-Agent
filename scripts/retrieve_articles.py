@@ -27,7 +27,7 @@ BASE_URL = "https://newsapi.org/v2/everything"
 # ----------------------------
 # Fetch articles function
 # ----------------------------
-def fetch_articles(query="technology", language="en", page_size=20):
+def fetch_articles(query="technology", language="en"):
     # Calculate date range: past 30 days
     to_date = datetime.now().strftime("%Y-%m-%d")
     from_date = (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
@@ -37,7 +37,6 @@ def fetch_articles(query="technology", language="en", page_size=20):
         "from": from_date,
         "to": to_date,
         "language": language,
-        "pageSize": page_size,
         "apiKey": API_KEY
     }
     try:
