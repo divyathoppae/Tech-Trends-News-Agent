@@ -15,3 +15,6 @@ These minimum requirements are specific to this allocation attempt and may vary.
 2025-11-28 14:36:42,643 - INFO - Loaded processed corpus: ../data/processed\technology_20251128_142414.json with 100 docs
 2025-11-28 14:37:49,981 - INFO - Loaded processed corpus: ../data/processed\technology_20251128_142414.json with 100 docs
 2025-11-28 14:41:52,167 - INFO - Loaded processed corpus: ../data/processed\technology_20251128_142414.json with 100 docs
+2025-11-28 14:59:01,522 - INFO - Loaded processed corpus: ../data/processed/technology_20251128_142414.json with 100 docs
+2025-11-28 15:11:02,952 - INFO - Loaded processed corpus: ../data/processed/technology_20251128_142414.json with 100 docs
+2025-11-28 16:57:40,295 - INFO - Loaded processed corpus: ../data/processed/technology_20251128_142414.json with 100 docs
