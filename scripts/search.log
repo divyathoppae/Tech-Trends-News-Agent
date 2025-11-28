@@ -1,0 +1,17 @@
+2025-11-28 11:55:57,897 - INFO - Loaded processed corpus: ../data/processed\processed_20251128_115120.json with 1 docs
+2025-11-28 12:32:38,967 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-11-28 12:33:14,041 - WARNING - Some parameters are on the meta device because they were offloaded to the cpu and disk.
+2025-11-28 12:33:14,045 - INFO - Loaded processed corpus: ../data/processed\processed_20251128_115120.json with 1 docs
+2025-11-28 13:17:39,610 - INFO - Based on the current allocation process, no modules could be assigned to the following devices due to insufficient memory:
+  - cpu: 604188160 bytes required
+These minimum requirements are specific to this allocation attempt and may vary. Consider increasing the available memory for these devices to at least the specified minimum, or adjusting the model config.
+2025-11-28 13:19:59,325 - INFO - Loaded processed corpus: ../data/processed\processed_20251128_115120.json with 1 docs
+2025-11-28 13:26:07,514 - INFO - Loaded processed corpus: ../data/processed\processed_20251128_115120.json with 1 docs
+2025-11-28 13:35:51,188 - INFO - Loaded processed corpus: ../data/processed\processed_20251128_115120.json with 1 docs
+2025-11-28 13:45:18,356 - INFO - Loaded processed corpus: ../data/processed\processed_20251128_115120.json with 1 docs
+2025-11-28 13:49:34,917 - INFO - Loaded processed corpus: ../data/processed\processed_20251128_115120.json with 1 docs
+2025-11-28 13:51:17,941 - INFO - Loaded processed corpus: ../data/processed\processed_20251128_115120.json with 1 docs
+2025-11-28 14:29:41,491 - INFO - Loaded processed corpus: ../data/processed\technology_20251128_142414.json with 100 docs
+2025-11-28 14:36:42,643 - INFO - Loaded processed corpus: ../data/processed\technology_20251128_142414.json with 100 docs
+2025-11-28 14:37:49,981 - INFO - Loaded processed corpus: ../data/processed\technology_20251128_142414.json with 100 docs
+2025-11-28 14:41:52,167 - INFO - Loaded processed corpus: ../data/processed\technology_20251128_142414.json with 100 docs

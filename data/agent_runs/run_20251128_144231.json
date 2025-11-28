@@ -1,0 +1,18 @@
+{
+  "query": "What are the latest technology trends?",
+  "result": {
+    "answer": "The latest technology trends are Apple's miniaturization of its camera technology",
+    "trajectory": [
+      {
+        "thought": "Searching for the latest technology trends",
+        "action": "Action: search[\"latest technology trends\", 10]",
+        "observation": "{\n  \"results\": [\n    {\n      \"id\": \"article_100\",\n      \"score\": 0.0,\n      \"snippet\": \"apple testing new camera miniaturization technology reduce size front-facing camera next year iphone 18 pro model claim chinese leaker according digital chat station weibo account three million follower apple testing\"\n    },\n    {\n      \"id\": \"article_99\",\n      \"score\": 0.0,\n      \"snippet\": \"follow slashdot story twitter nickname password nickname password fine print following comment owned whoever posted responsible way 1. lot empty seat lot 2. demo n't live likely due huge failure\"\n    },\n    {\n      \"id\": \"article_98\",\n      \"score\": 0.0,\n      \"snippet\": \"44,300 people blocked booking house technology last year halloween airbnb biggest fear n't ghost ghoul guest throwing party airbnb say deploying ai anti-party technology across u.s. canada mitigate halloween gathering\"\n    }\n  ]\n}"
+      },
+      {
+        "thought": "The latest technology trends are Apple's miniaturization of its camera technology, according to a digital chat station, and the development of new AI technology for anti-party gatherings.",
+        "action": "Action: finish[answer=\"The latest technology trends are Apple's miniaturization of its camera technology, according to a digital chat station, and the development of new AI technology for anti-party gatherings.\"]",
+        "observation": "done"
+      }
+    ]
+  }
+}
