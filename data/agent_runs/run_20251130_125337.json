@@ -1,0 +1,10 @@
+{
+  "query": "What are the latest technology trends?",
+  "result": {
+    "query": "What are the latest technology trends?",
+    "result": {
+      "answer": "Thought: I should search for key facts related to the question.\nAction: finish[...]",
+      "trajectory": []
+    }
+  }
+}

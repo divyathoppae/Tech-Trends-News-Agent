@@ -1,0 +1,23 @@
+{
+  "query": "What are the latest technology trends?",
+  "result": {
+    "answer": "Thought: I should search for key facts related to the question.\nAction: search[query=\"(auto) refine the user question\", k=3]",
+    "trajectory": [
+      {
+        "thought": "Search for the latest technology trends",
+        "action": "Action: search[\"latest technology trends\"]",
+        "observation": "{\n  \"results\": [\n    {\n      \"id\": \"article_100\",\n      \"score\": 0.0,\n      \"snippet\": \"apple testing new camera miniaturization technology reduce size front-facing camera next year iphone 18 pro model claim chinese leaker according digital chat station weibo account three million follower apple testing\"\n    },\n    {\n      \"id\": \"article_99\",\n      \"score\": 0.0,\n      \"snippet\": \"follow slashdot story twitter nickname password nickname password fine print following comment owned whoever posted responsible way 1. lot empty seat lot 2. demo n't live likely due huge failure\"\n    },\n    {\n      \"id\": \"article_98\",\n      \"score\": 0.0,\n      \"snippet\": \"44,300 people blocked booking house technology last year halloween airbnb biggest fear n't ghost ghoul guest throwing party airbnb say deploying ai anti-party technology across u.s. canada mitigate halloween gathering\"\n    }\n  ]\n}\nSynthesized: apple testing new camera miniaturization technology reduce size front-facing camera next year iphone 18 pro model claim chinese leaker according digital chat station weibo account three million follower apple testing follow slashdot story twitter nickname password nickname password fine print following comment owned whoever posted responsible way 1. lot empty seat lot 2. demo n't live likely due huge failure 44,300 people blocked booking house technology last year halloween airbnb biggest fear n't ghost ghoul guest throwing party airbnb say deploying ai anti-party technology across u.s. canada mitigate halloween gathering"
+      },
+      {
+        "thought": "Search for the latest technology trends",
+        "action": "Action: search[\"latest technology trends\"]",
+        "observation": "{\n  \"results\": [\n    {\n      \"id\": \"article_100\",\n      \"score\": 0.0,\n      \"snippet\": \"apple testing new camera miniaturization technology reduce size front-facing camera next year iphone 18 pro model claim chinese leaker according digital chat station weibo account three million follower apple testing\"\n    },\n    {\n      \"id\": \"article_99\",\n      \"score\": 0.0,\n      \"snippet\": \"follow slashdot story twitter nickname password nickname password fine print following comment owned whoever posted responsible way 1. lot empty seat lot 2. demo n't live likely due huge failure\"\n    },\n    {\n      \"id\": \"article_98\",\n      \"score\": 0.0,\n      \"snippet\": \"44,300 people blocked booking house technology last year halloween airbnb biggest fear n't ghost ghoul guest throwing party airbnb say deploying ai anti-party technology across u.s. canada mitigate halloween gathering\"\n    }\n  ]\n}\nSynthesized: apple testing new camera miniaturization technology reduce size front-facing camera next year iphone 18 pro model claim chinese leaker according digital chat station weibo account three million follower apple testing follow slashdot story twitter nickname password nickname password fine print following comment owned whoever posted responsible way 1. lot empty seat lot 2. demo n't live likely due huge failure 44,300 people blocked booking house technology last year halloween airbnb biggest fear n't ghost ghoul guest throwing party airbnb say deploying ai anti-party technology across u.s. canada mitigate halloween gathering"
+      },
+      {
+        "thought": "search[\"latest technology trends\"]",
+        "action": "Action: finish[answer=\"Apple is testing a new camera miniaturization technology that will reduce the size of the front-facing camera, according to a digital chat station Weibo account with three million followers. Apple also claims to have blocked a lot of bookings at Airbnb due to the fear of ghost ghoul guests throwing parties. The biggest fear is that the technology might not be effective.\"]",
+        "observation": "done"
+      }
+    ]
+  }
+}
