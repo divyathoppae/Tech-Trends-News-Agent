@@ -1,0 +1,18 @@
+{
+  "query": "What is the most helpful technology recently?",
+  "result": {
+    "answer": "",
+    "trajectory": [
+      {
+        "thought": "Searching the tech corpus for the most helpful technology recently will not provide a specific answer.",
+        "action": "Action: search[most helpful technology recently, technology, recent]",
+        "observation": "{\n  \"results\": [\n    {\n      \"id\": \"article_232\",\n      \"score\": 0.0,\n      \"snippet\": \"\"\n    },\n    {\n      \"id\": \"article_231\",\n      \"score\": 0.0,\n      \"snippet\": \"\"\n    },\n    {\n      \"id\": \"article_230\",\n      \"score\": 0.0,\n      \"snippet\": \"\"\n    }\n  ]\n}"
+      },
+      {
+        "thought": "The most helpful technology recently has not been identified.",
+        "action": "Action: finish[The most helpful technology recently has not been identified.]]",
+        "observation": "done"
+      }
+    ]
+  }
+}

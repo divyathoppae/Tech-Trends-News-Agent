@@ -30,7 +30,13 @@ class AgentConfig:
 # Helper functions
 # ----------------------------
 def parse_action(line: str) -> Optional[Tuple[str, Dict[str, Any]]]:
-    """Parse an Action line into (tool_name, args)."""
+    """Parse an Action line into (tool_name, args).
+    
+    Supports multiple answer formats for the finish action:
+    - finish[answer="short answer"]
+    - finish[answer=longer answer without quotes]
+    - finish[answer=\"\"\"multi-line answer\"\"\"]
+    """
     if not line.startswith("Action:"):
         return None
     s = line[len("Action:"):].strip()
@@ -41,12 +47,80 @@ def parse_action(line: str) -> Optional[Tuple[str, Dict[str, Any]]]:
     inner = s[lb + 1:rb].strip()
 
     args = {}
+    
+    if name == "finish":
+        # Special handling for finish to support longer answers
+        
+        # Try triple-quoted string first (for multi-line)
+        triple_match = re.search(r'answer\s*=\s*"""(.*?)"""', inner, re.DOTALL)
+        if triple_match:
+            args["answer"] = triple_match.group(1).strip()
+            return name, args
+        
+        # Try double-quoted string
+        double_match = re.search(r'answer\s*=\s*"((?:[^"\\]|\\.)*)"', inner, re.DOTALL)
+        if double_match:
+            # Unescape any escaped quotes
+            args["answer"] = double_match.group(1).replace('\\"', '"').strip()
+            return name, args
+        
+        # Try single-quoted string
+        single_match = re.search(r"answer\s*=\s*'((?:[^'\\]|\\.)*)'", inner, re.DOTALL)
+        if single_match:
+            args["answer"] = single_match.group(1).replace("\\'", "'").strip()
+            return name, args
+        
+        # Fallback: everything after "answer=" is the answer (no quotes)
+        unquoted_match = re.search(r'answer\s*=\s*(.+)', inner, re.DOTALL)
+        if unquoted_match:
+            args["answer"] = unquoted_match.group(1).strip()
+            return name, args
+        
+        # If no answer= found, use the entire inner content
+        if inner and "answer" not in inner.lower():
+            args["answer"] = inner
+            return name, args
+            
+        args["answer"] = ""
+        return name, args
+    
+    # Standard parsing for other tools (like search)
     if inner:
         for field in inner.split(","):
             if "=" in field:
                 key, val = field.split("=", 1)
-                args[key.strip()] = val.strip().strip('"')
+                val = val.strip()
+                # Remove surrounding quotes if present
+                if (val.startswith('"') and val.endswith('"')) or \
+                   (val.startswith("'") and val.endswith("'")):
+                    val = val[1:-1]
+                args[key.strip()] = val
     return name, args
+
+
+def parse_multiline_action(text: str) -> Optional[Tuple[str, Dict[str, Any]]]:
+    """Parse an action that may span multiple lines (for finish with long answers)."""
+    
+    # Look for finish action with multi-line answer
+    finish_match = re.search(
+        r'Action:\s*finish\s*\[\s*answer\s*=\s*"""(.*?)"""\s*\]',
+        text,
+        re.DOTALL
+    )
+    if finish_match:
+        return "finish", {"answer": finish_match.group(1).strip()}
+    
+    # Look for finish with regular quotes but allowing newlines in content
+    finish_match = re.search(
+        r'Action:\s*finish\s*\[\s*answer\s*=\s*"((?:[^"\\]|\\.)*)"\s*\]',
+        text,
+        re.DOTALL
+    )
+    if finish_match:
+        answer = finish_match.group(1).replace('\\"', '"').strip()
+        return "finish", {"answer": answer}
+    
+    return None
 
 
 def format_history(trajectory: List[Step]) -> str:
@@ -68,14 +142,15 @@ def make_prompt(user_query: str, trajectory: List[Step]) -> str:
         "Thought: <your reasoning>\n"
         "Action: <one of the tool calls above>\n\n"
         "IMPORTANT:\n"
-        "- When you use finish[answer=...], provide a clear, well-structured paragraph that fully answers the user question.\n"
-        "- The paragraph should be natural language, not just keywords.\n"
+        "- When you use finish[answer=...], provide a comprehensive, detailed answer.\n"
+        "- Your answer should be multiple sentences that fully address the user's question.\n"
+        "- Synthesize and explain the information you found, don't just list keywords.\n"
+        "- For longer answers, you can use: finish[answer=\"\"\"your detailed multi-sentence answer here\"\"\"]\n"
         "- You MUST call finish[] once you have enough information to answer.\n"
         "- Do not search more than 2-3 times before finishing.\n"
     )
     history_block = format_history(trajectory)
     
-    # Don't append "Thought:" here - let the LLM generate the full response
     if history_block:
         return f"{SYSTEM_PREAMBLE}\n\nUser Question: {user_query}\n\n{history_block}\n\nNext step:"
     else:
@@ -97,26 +172,64 @@ class ReActAgent:
         thought = "(no thought)"
         action_line = "Action: finish[answer=\"(no answer)\"]"
 
-        # Try to find Thought and Action in the output
-        # Handle case where LLM includes "Thought:" or not
-        
-        # First, check if output contains both markers
+        # First, try to parse multi-line finish action from full output
+        multiline_result = parse_multiline_action(out)
+        if multiline_result:
+            name, args = multiline_result
+            if name == "finish":
+                # Extract thought (everything before Action:)
+                if "Thought:" in out:
+                    t_match = re.search(r"Thought:\s*(.*?)(?=Action:|$)", out, re.DOTALL)
+                    thought = t_match.group(1).strip() if t_match else "(no thought)"
+                else:
+                    parts = out.split("Action:", 1)
+                    thought = parts[0].strip()
+                
+                # Reconstruct the action line
+                answer = args.get("answer", "")
+                if "\n" in answer or '"' in answer:
+                    action_line = f'Action: finish[answer="""{answer}"""]'
+                else:
+                    action_line = f'Action: finish[answer="{answer}"]'
+                return thought, action_line
+
+        # Standard parsing for single-line actions
         if "Action:" in out:
             if "Thought:" in out:
-                # Standard format: "Thought: ... Action: ..."
                 t_match = re.search(r"Thought:\s*(.*?)(?=Action:|$)", out, re.DOTALL)
                 thought = t_match.group(1).strip() if t_match else "(no thought)"
             else:
-                # LLM didn't include "Thought:" - everything before "Action:" is the thought
                 parts = out.split("Action:", 1)
                 thought = parts[0].strip()
             
-            # Extract the action
-            a_match = re.search(r"Action:\s*(.+?)(?:\n|$)", out)
-            if a_match:
-                action_line = "Action: " + a_match.group(1).strip()
+            # Extract the action - handle potential multi-line content in brackets
+            action_start = out.find("Action:")
+            action_content = out[action_start + len("Action:"):].strip()
+            
+            # Find matching brackets
+            if "[" in action_content:
+                bracket_start = action_content.find("[")
+                bracket_count = 1
+                bracket_end = bracket_start + 1
+                
+                while bracket_end < len(action_content) and bracket_count > 0:
+                    if action_content[bracket_end] == "[":
+                        bracket_count += 1
+                    elif action_content[bracket_end] == "]":
+                        bracket_count -= 1
+                    bracket_end += 1
+                
+                if bracket_count == 0:
+                    full_action = action_content[:bracket_end].strip()
+                    action_line = "Action: " + full_action
+                else:
+                    # Brackets don't match, take first line
+                    first_line = action_content.split("\n")[0].strip()
+                    action_line = "Action: " + first_line
+            else:
+                first_line = action_content.split("\n")[0].strip()
+                action_line = "Action: " + first_line
         else:
-            # No Action found - treat entire output as thought and force finish
             thought = out.strip()
             if self.config.verbose:
                 print("⚠️ No Action found in LLM output, forcing finish")
@@ -136,7 +249,6 @@ class ReActAgent:
                 print(f"{'='*50}")
                 print(f"LLM Output:\n{out}")
 
-            # Parse the output
             thought, action_line = self._parse_llm_output(out)
 
             if self.config.verbose:
@@ -175,6 +287,7 @@ class ReActAgent:
                 }
                 if self.config.verbose:
                     print(f"✅ Finished!")
+                    print(f"📝 Answer length: {len(final['answer'])} characters")
                 self.save_run(user_query, final)
                 return final
             else:
@@ -184,11 +297,9 @@ class ReActAgent:
 
             self.trajectory.append(Step(thought, action_line, obs))
 
-        # Max steps reached - compile what we have
         if self.config.verbose:
             print(f"\n⚠️ Max steps ({self.config.max_steps}) reached without finish")
         
-        # Try to generate a final answer from the trajectory
         final_answer = self._generate_fallback_answer(user_query)
         final = {
             "answer": final_answer,
@@ -199,7 +310,6 @@ class ReActAgent:
 
     def _generate_fallback_answer(self, user_query: str) -> str:
         """Generate a fallback answer if max steps reached."""
-        # Collect all search results from observations
         all_results = []
         for step in self.trajectory:
             if step.observation and step.observation != "done":

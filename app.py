@@ -1,8 +1,6 @@
 import streamlit as st
 import json
 import os
-import re
-from collections import Counter
 from typing import List, Dict, Any
 import sys
 
@@ -14,265 +12,140 @@ from react_agent import ReActAgent, AgentConfig
 # Page config
 st.set_page_config(
     page_title="Tech Trends News Agent",
-    page_icon="🤖",
-    layout="wide"
+    layout="centered"
 )
 
-# Custom CSS for better styling
+# Custom CSS for minimalist styling
 st.markdown("""
     <style>
     .main-header {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #1f77b4;
-        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #2c3e50;
         margin-bottom: 2rem;
     }
-    .answer-box {
-        background-color: #f0f2f6;
-        padding: 1.5rem;
-        border-radius: 10px;
-        border-left: 4px solid #1f77b4;
-        margin: 1rem 0;
-    }
-    .step-box {
-        background-color: #ffffff;
+    .chat-message {
         padding: 1rem;
-        border-radius: 5px;
-        border: 1px solid #e0e0e0;
-        margin: 0.5rem 0;
+        border-radius: 8px;
+        margin: 1rem 0;
+        color: #2c3e50;
+    }
+    .user-message {
+        background-color: #f8f9fa;
+        border-left: 3px solid #007bff;
+        color: #2c3e50;
+    }
+    .assistant-message {
+        background-color: #ffffff;
+        border-left: 3px solid #28a745;
+        color: #2c3e50;
+    }
+    .chat-message strong {
+        color: #1a1a1a;
+    }
+    .stTextInput > div > div > input {
+        border-radius: 8px;
     }
     </style>
 """, unsafe_allow_html=True)
 
 # Initialize session state
-if 'agent' not in st.session_state:
-    st.session_state.agent = None
-if 'results' not in st.session_state:
-    st.session_state.results = None
-if 'query_history' not in st.session_state:
-    st.session_state.query_history = []
+if 'chat_history' not in st.session_state:
+    st.session_state.chat_history = []
 
 
-def extract_topics_from_text(text: str, min_length: int = 3) -> List[str]:
-    """Extract meaningful words/topics from text."""
-    # Common stop words to filter out
-    stop_words = {
-        'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-        'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
-        'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would',
-        'could', 'should', 'may', 'might', 'must', 'can', 'this', 'that',
-        'these', 'those', 'i', 'you', 'he', 'she', 'it', 'we', 'they',
-        'what', 'which', 'who', 'when', 'where', 'why', 'how', 'all', 'each',
-        'every', 'both', 'few', 'more', 'most', 'other', 'some', 'such',
-        'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too',
-        'very', 'just', 'now', 'then', 'here', 'there', 'where', 'why',
-        'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other',
-        'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so',
-        'than', 'too', 'very', 'can', 'will', 'just', 'don', 'should', 'now',
-        'one', 'two', 'three', 'first', 'second', 'third', 'new', 'old',
-        'get', 'got', 'go', 'went', 'come', 'came', 'see', 'saw', 'know',
-        'knew', 'think', 'thought', 'say', 'said', 'tell', 'told', 'make',
-        'made', 'take', 'took', 'give', 'gave', 'use', 'used', 'find',
-        'found', 'work', 'worked', 'call', 'called', 'try', 'tried'
-    }
-    
-    # Tokenize: extract words (alphanumeric sequences, minimum 3 chars)
-    words = re.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
-    
-    # Filter out stop words and short words
-    topics = [w for w in words if w not in stop_words and len(w) >= min_length]
-    
-    return topics
-
-
-def extract_topics_from_results(result: Dict[str, Any]) -> Counter:
-    """Extract topics from agent results (answer + search results)."""
-    all_topics = []
-    
-    # Extract from final answer
-    answer = result.get('answer', '')
-    if answer:
-        all_topics.extend(extract_topics_from_text(answer))
-    
-    # Extract from trajectory search results
-    trajectory = result.get('trajectory', [])
-    for step in trajectory:
-        obs = step.get('observation', '')
-        if obs and obs != 'done':
-            try:
-                obs_data = json.loads(obs)
-                if 'results' in obs_data:
-                    for res in obs_data['results']:
-                        snippet = res.get('snippet', '')
-                        if snippet:
-                            all_topics.extend(extract_topics_from_text(snippet))
-            except (json.JSONDecodeError, TypeError):
-                pass
-    
-    # Count topics
-    topic_counts = Counter(all_topics)
-    
-    # Filter: keep topics that appear 2+ times OR are 5+ characters long
-    # This helps capture both frequent short terms and meaningful longer terms
-    filtered_counts = {k: v for k, v in topic_counts.items() 
-                      if v >= 2 or len(k) >= 5}
-    
-    return Counter(filtered_counts)
-
-
-def load_previous_runs() -> List[Dict[str, Any]]:
-    """Load previous agent runs from JSON files."""
-    runs_dir = os.path.join(os.path.dirname(__file__), 'data', 'agent_runs')
-    if not os.path.exists(runs_dir):
+def load_previous_chats() -> List[Dict[str, Any]]:
+    """Load previous chats from JSON files."""
+    chats_dir = os.path.join(os.path.dirname(__file__), 'data', 'agent_runs')
+    if not os.path.exists(chats_dir):
         return []
     
-    runs = []
-    for filename in sorted(os.listdir(runs_dir), reverse=True):
+    chats = []
+    for filename in sorted(os.listdir(chats_dir), reverse=True):
         if filename.endswith('.json'):
-            filepath = os.path.join(runs_dir, filename)
+            filepath = os.path.join(chats_dir, filename)
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:
-                    runs.append(json.load(f))
+                    chats.append(json.load(f))
             except Exception as e:
                 st.warning(f"Could not load {filename}: {e}")
     
-    return runs
+    return chats
 
 
 # Main UI
-st.markdown('<div class="main-header">🤖 Tech Trends News Agent</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">Tech Trends News Agent</div>', unsafe_allow_html=True)
 
-# Sidebar for previous runs
+# Sidebar for previous chats
 with st.sidebar:
-    st.header("📚 Previous Runs")
-    previous_runs = load_previous_runs()
+    st.header("Previous Chats")
+    previous_chats = load_previous_chats()
     
-    if previous_runs:
-        run_options = [f"{run['query'][:50]}..." if len(run['query']) > 50 else run['query'] 
-                      for run in previous_runs]
-        selected_run_idx = st.selectbox(
-            "Select a previous run:",
-            range(len(previous_runs)),
-            format_func=lambda x: run_options[x]
+    if previous_chats:
+        chat_options = [f"{chat['query'][:50]}..." if len(chat['query']) > 50 else chat['query'] 
+                       for chat in previous_chats]
+        selected_chat_idx = st.selectbox(
+            "Select a previous chat:",
+            range(len(previous_chats)),
+            format_func=lambda x: chat_options[x],
+            label_visibility="collapsed"
         )
         
-        if st.button("Load Selected Run"):
-            st.session_state.results = previous_runs[selected_run_idx]
+        if st.button("Load Chat", use_container_width=True):
+            selected_chat = previous_chats[selected_chat_idx]
+            st.session_state.chat_history = [
+                {'role': 'user', 'content': selected_chat['query']},
+                {'role': 'assistant', 'content': selected_chat['result'].get('answer', 'No answer available.')}
+            ]
             st.rerun()
     else:
-        st.info("No previous runs found.")
+        st.info("No previous chats found.")
 
-# Main content area
-col1, col2 = st.columns([2, 1])
+# Display chat history
+for message in st.session_state.chat_history:
+    if message['role'] == 'user':
+        with st.chat_message("user"):
+            st.write(message["content"])
+    else:
+        with st.chat_message("assistant"):
+            st.write(message["content"])
 
+# Chat input
+query = st.text_input(
+    "Ask a question about technology trends:",
+    placeholder="Type your question here...",
+    key="query_input",
+    label_visibility="collapsed"
+)
+
+col1, col2 = st.columns([1, 5])
 with col1:
-    st.header("💬 Ask a Question")
-    
-    query = st.text_input(
-        "Enter your question about technology trends:",
-        placeholder="e.g., What are the latest technology trends?",
-        key="query_input"
-    )
-    
-    col_btn1, col_btn2 = st.columns([1, 4])
-    with col_btn1:
-        run_query = st.button("🔍 Search", type="primary", use_container_width=True)
-    
-    if run_query and query:
-        with st.spinner("🤔 Agent is thinking..."):
-            try:
-                # Run agent with non-verbose config
-                config = AgentConfig(max_steps=6, allow_tools=("search", "finish"), verbose=False)
-                agent = ReActAgent(config=config)
-                result = agent.run(query)
-                
-                # Store results
-                st.session_state.results = {
-                    'query': query,
-                    'result': result
-                }
-                
-                st.success("✅ Query completed!")
-                st.rerun()
-                
-            except Exception as e:
-                st.error(f"Error running agent: {str(e)}")
-                st.exception(e)
+    send_button = st.button("Send", type="primary", use_container_width=True)
 
-# Display results
-if st.session_state.results:
-    result_data = st.session_state.results.get('result', {})
-    query_text = st.session_state.results.get('query', 'Unknown Query')
+if send_button and query:
+    # Add user message to chat
+    st.session_state.chat_history.append({'role': 'user', 'content': query})
     
-    st.markdown("---")
-    
-    # Display query
-    st.subheader(f"📝 Query: {query_text}")
-    
-    # Display answer
-    answer = result_data.get('answer', 'No answer provided.')
-    st.markdown('<div class="answer-box">', unsafe_allow_html=True)
-    st.markdown("### 💡 Answer")
-    st.markdown(answer)
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Extract and display topics
-    topic_counts = extract_topics_from_results(result_data)
-    
-    if topic_counts:
-        st.markdown("---")
-        st.subheader("📊 Most Common Topics")
-        
-        # Get top N topics
-        top_n = st.slider("Number of topics to display:", 5, 30, 15, key="top_n_slider")
-        top_topics = dict(topic_counts.most_common(top_n))
-        
-        if top_topics:
-            # Create bar chart
-            import pandas as pd
+    with st.spinner("Thinking..."):
+        try:
+            # Run agent
+            config = AgentConfig(max_steps=6, allow_tools=("search", "finish"), verbose=False)
+            agent = ReActAgent(config=config)
+            result = agent.run(query)
             
-            df = pd.DataFrame({
-                'Topic': list(top_topics.keys()),
-                'Frequency': list(top_topics.values())
-            })
+            # Get answer
+            answer = result.get('answer', 'No answer provided.')
             
-            st.bar_chart(df.set_index('Topic'))
+            # Add assistant response to chat
+            st.session_state.chat_history.append({'role': 'assistant', 'content': answer})
             
-            # Display as table
-            with st.expander("📋 View Topic Details"):
-                st.dataframe(df.sort_values('Frequency', ascending=False), use_container_width=True)
-    
-    # Display trajectory (optional, in expander)
-    trajectory = result_data.get('trajectory', [])
-    if trajectory:
-        with st.expander("🔍 View Agent Steps"):
-            for i, step in enumerate(trajectory, 1):
-                st.markdown(f"### Step {i}")
-                st.markdown(f"**Thought:** {step.get('thought', 'N/A')}")
-                st.markdown(f"**Action:** `{step.get('action', 'N/A')}`")
-                
-                obs = step.get('observation', '')
-                if obs and obs != 'done':
-                    try:
-                        obs_data = json.loads(obs)
-                        if 'results' in obs_data:
-                            st.markdown(f"**Search Results:** {len(obs_data['results'])} found")
-                            with st.expander(f"View {len(obs_data['results'])} results"):
-                                for j, res in enumerate(obs_data['results'], 1):
-                                    st.markdown(f"**Result {j}:**")
-                                    st.markdown(f"- ID: {res.get('id', 'N/A')}")
-                                    st.markdown(f"- Score: {res.get('score', 0):.4f}")
-                                    st.markdown(f"- Snippet: {res.get('snippet', 'N/A')[:200]}...")
-                        else:
-                            st.markdown(f"**Observation:** {obs[:500]}...")
-                    except (json.JSONDecodeError, TypeError):
-                        st.markdown(f"**Observation:** {obs[:500]}...")
-                else:
-                    st.markdown(f"**Observation:** {obs}")
-                
-                st.markdown("---")
+            st.rerun()
+            
+        except Exception as e:
+            st.error(f"Error: {str(e)}")
+            st.session_state.chat_history.append({'role': 'assistant', 'content': f"Sorry, I encountered an error: {str(e)}"})
+            st.rerun()
 
-else:
-    st.info("👆 Enter a question above and click 'Search' to get started, or load a previous run from the sidebar.")
+if not st.session_state.chat_history:
+    st.info("Start a conversation by typing a question above.")
 
